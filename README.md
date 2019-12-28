@@ -7,3 +7,22 @@
 - Po udostępnieniu plików na koncie adresata powinno się pojawić powiadomienie o nowym pliku
 - Użytkownik powinien posiadać listę aktualnie udostępnionych plików
 - Akacja powinna udostępniać REST API umożliwiające integrację z różnego typu klientami
+
+
+## Commity
+
+ 
+    Skrótowy, kontretny opis Twojego commitu + bardziej szczegółowy opis danego commita, 
+    w ktorym mozesz opisac konkretne przyczyny tego commita i/lub zmiany jakie wprowadza.
+    
+    git commit -m "krótki opis"
+    git commit -m "krótki opis" -m "dłuższy opis"
+
+Przykład:
+
+    git commit -m "Adds changes to index function in DriveController"
+
+lub
+
+    git commit -m "Adds changes to index function in DriveController" -m "( redirection to auth.login if user isn't signed in )"
+
