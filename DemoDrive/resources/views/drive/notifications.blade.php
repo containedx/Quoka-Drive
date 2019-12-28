@@ -81,7 +81,7 @@
 
                 <div class="notifications-list-item">
                     <div class="notifications-list-item__details">
-                        <span><strong>Username</strong> wants to share file <strong>filename</strong>. Do you accept?</span>
+                        <span><strong>Username</strong> wants to share file [ <strong>file_name</strong> ]. Do you accept?</span>
                     </div>
 
                     <div></div>  <!-- styling purposes -->
@@ -101,7 +101,7 @@
                 </div>
                 <div class="notifications-list-item">
                     <div class="notifications-list-item__details">
-                        <span><strong>Username</strong> wants to share file <strong>filename</strong>. Do you accept?</span>
+                        <span><strong>Username</strong> wants to share file [ <strong>file_name</strong> ]. Do you accept?</span>
                     </div>
 
                     <div></div>  <!-- styling purposes -->
@@ -121,7 +121,7 @@
                 </div>
                 <div class="notifications-list-item">
                     <div class="notifications-list-item__details">
-                        <span><strong>Username</strong> wants to share file <strong>filename</strong>. Do you accept?</span>
+                        <span><strong>Username</strong> wants to share file [ <strong>file_name</strong> ]. Do you accept?</span>
                     </div>
 
                     <div></div>  <!-- styling purposes -->
@@ -141,7 +141,7 @@
                 </div>
                 <div class="notifications-list-item">
                     <div class="notifications-list-item__details">
-                        <span><strong>Username</strong> wants to share file <strong>filename</strong>. Do you accept?</span>
+                        <span><strong>Username</strong> wants to share file [ <strong>file_name</strong> ]. Do you accept?</span>
                     </div>
 
                     <div></div>  <!-- styling purposes -->
@@ -161,7 +161,7 @@
                 </div>
                 <div class="notifications-list-item">
                     <div class="notifications-list-item__details">
-                        <span><strong>Username</strong> wants to share file <strong>filename</strong>. Do you accept?</span>
+                        <span><strong>Username</strong> wants to share file [ <strong>file_name</strong> ]. Do you accept?</span>
                     </div>
 
                     <div></div>  <!-- styling purposes -->
@@ -181,7 +181,7 @@
                 </div>
                 <div class="notifications-list-item">
                     <div class="notifications-list-item__details">
-                        <span><strong>Username</strong> wants to share file <strong>filename</strong>. Do you accept?</span>
+                        <span><strong>Username</strong> wants to share file [ <strong>file_name</strong> ]. Do you accept?</span>
                     </div>
 
                     <div></div>  <!-- styling purposes -->
@@ -199,7 +199,6 @@
                     </div>
 
                 </div>
-
 
             </div>
 

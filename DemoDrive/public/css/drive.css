@@ -214,7 +214,7 @@
 
 #main-drive #storage #files-list .files-list-item .files-list-item__download a {
   display: block;
-  background-color: #37be70;
+  background-color: rgba(55, 190, 112, 0.8);
   width: 70%;
   border-radius: 5px;
   line-height: 2.5rem;
