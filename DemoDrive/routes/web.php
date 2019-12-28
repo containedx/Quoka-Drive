@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "DriveController@index");
+
+Route::get('/drive', "DriveController@index")->middleware('auth');
+
+Route::get('/notifications', "DriveController@notifications")->middleware('auth');
+
+Auth::routes();

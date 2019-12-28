@@ -16,7 +16,7 @@ class DriveController extends Controller
             return view('auth.login');
         }
     }
-    
+
     public function guest()
     {
         return view('auth.login');
