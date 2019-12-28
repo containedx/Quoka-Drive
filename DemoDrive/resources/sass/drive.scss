@@ -1,0 +1,203 @@
+
+#main-drive{
+    display: grid;
+    grid-template-columns: 15rem 1fr 450px;
+    grid-template-rows: 1fr;
+    column-gap: 1rem;
+    margin: 3vh 1rem 0 0;
+    max-height: 90vh;
+
+    //Import style for sidebar navigation
+    @import 'shared/sidebar';
+
+    //Styling main file storage
+    #storage{
+        background: #fff;
+        border-radius: 5px;
+        height: 100%;
+        max-height: 87rem;
+        border:1px solid rgba(224, 224, 245, 0.8);
+        position: relative;
+
+        .section-title {
+            position: absolute;
+            width: 100%;
+            height: 2.5rem;
+            background: #dee8ee;
+            border-bottom: 1px solid rgba(203, 197, 249, 0.62);
+            display: grid;
+            grid-template-columns: 4fr 2fr 2fr 1fr 1fr 4fr;
+            grid-template-rows: 1fr;
+            line-height: 2.5rem;
+            padding: 0 0 0 1rem;
+            column-gap: 1px;
+
+            span{
+                //background-color: #1d68a7;
+            }
+        }
+
+        #files-list{
+            display: grid;
+            grid-auto-rows: 5rem;
+            grid-template-columns: 1fr;
+            margin: 2.5rem 0 0 0;
+            height: 82.5vh;
+            overflow-y: scroll;
+
+            .files-list-item{
+                //background-color: #1d68a7;
+                display: grid;
+                grid-template-columns: 4fr 2fr 2fr 1fr 1fr 4fr;
+                grid-template-rows: 1fr;
+                column-gap: 1px;
+                padding: 0 0 0 1rem;
+
+                &:nth-of-type(2n){
+                    background-color: rgba(224, 224, 245, 0.15);
+                    border-top: 1px solid rgba(167, 175, 224, 0.27);
+                }
+
+                &:last-of-type{
+                    border-bottom: 1px solid rgba(167, 175, 224, 0.27);
+                }
+
+
+                .files-list-item__name{
+                    //background-color: #6cb2eb;
+                    line-height: 5rem;
+                }
+
+                .files-list-item__size{
+                    //background-color: #6cb2eb;
+                    line-height: 5rem;
+                    padding: 0 0 0 1rem;
+
+                }
+
+                .files-list-item__type{
+                    //background-color: #6cb2eb;
+                    line-height: 5rem;
+                    padding: 0 0 0 0.5rem;
+
+                }
+
+                .files-list-item__download{
+                    //background-color: #6cb2eb;
+                    line-height: 5rem;
+
+                    a{
+                        display: block;
+                        background-color: #37be70;
+                        width: 70%;
+                        border-radius: 5px;
+                        line-height: 2.5rem;
+                        text-align: center;
+                        cursor: pointer;
+                        height: 2.5rem;
+                        margin: 1.25rem auto 0 auto;
+                        color: #fff;
+                        z-index: 0;
+
+                        &:hover{
+                            background-color: #36b266;
+                        }
+                    }
+                }
+
+                .files-list-item__share{
+                    //background-color: #6cb2eb;
+                    line-height: 5rem;
+                    padding: 0 0 0 0.5rem;
+
+                    a{
+                        padding: 0.5rem 0.73rem;
+                        border: 1px solid rgba(224, 224, 245, 0.8);
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin: 0 auto;
+                        transition-delay: 0.02s;
+                        background-color: #fff;
+
+                        svg{
+                            color: rgba(224, 224, 245, 0.8);
+                            transition-delay: 0.02s;
+                        }
+
+                        &:hover{
+                            border: 1px solid rgba(168, 168, 189, 0.8);
+
+                            svg{
+                                color: rgba(168, 168, 189, 0.8);
+                            }
+                        }
+                    }
+                }
+
+                .files-list-item__del{
+                    //background-color: #6cb2eb;
+                    line-height: 5rem;
+                    padding: 0 0 0 0.5rem;
+
+                    a{
+                        padding: 0.5rem 0.73rem;
+                        border: 1px solid rgba(245, 114, 103, 0.3);
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin: 0 auto;
+                        transition-delay: 0.02s;
+                        background-color: #fff;
+
+                        svg{
+                            color: rgba(245, 114, 103, 0.7);
+                            transition-delay: 0.02s;
+                        }
+
+                        &:hover{
+                            border: 1px solid rgba(245, 114, 103, 0.8);
+
+                            svg{
+                                color: rgba(245, 114, 103, 0.8);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Import style for private share sidebar
+    @import 'shared/share';
+}
+
+
+body{
+    &:hover{
+        #app{
+            .py-4{
+                #main-drive{
+                    #share{
+                        #share-list{
+                            .accordion{
+                                .card{
+                                    .card-header{
+
+                                        .mb-0{
+
+                                            .btn{
+
+                                                &.btn-link{
+                                                    text-decoration: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
