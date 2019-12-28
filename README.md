@@ -24,5 +24,5 @@ Przykład:
 
 lub
 
-    git commit -m "Adds changes to index function in DriveController" -m "( redirection to auth.login if user isn't signed in )"
+    git commit -m "Adds changes to index function in DriveController" -m "[ redirection to auth.login if user isn't signed in ]"
 
