@@ -1,29 +1,39 @@
+
 # Dysk internetowy
 
 - Aplikacja działa w sposób zbliżony do popularnych serwisów takich jak Dropbox
+
+
 - Każdy z użytkowników może dodawać własne pliki, które domyślne są widoczne tylko dla niego.
 
 
 - Użytkownik może tworzyć link do pobrania pliku, jest on wtedy ogólnie dostępny dla wszystkich osób posiadających link
 
-	Jest to taki szary przycisk ze strzałką. Po kliknięciu kopijemy link pozwalający ściągnąć konkretny plik.
-	https://laracasts.com/discuss/channels/laravel/laravel-copy-to-clipboard-button
+Jest to taki szary przycisk ze strzałką. Po kliknięciu kopiujemy link pozwalający ściągnąć konkretny plik.
+    
+    https://laracasts.com/discuss/channels/laravel/laravel-copy-to-clipboard-button
+    
+	
 	
 - Użytkownik może udostępniać plik innym użytkownikom serwisu - prywatne udostępnianie
 	
-	Kazdy uzywtkownik ma przypisany unikatowy secret key, ktory jest wykozystywany podczas prywatnego udostepniania plikow.
-	Robimy, że można cofnąć uprawnienia do pliku czy nie? Jeśli tak, to musimy zabronić ponownego udostępnienia pliku.
-	Secret Key:
-	https://stackoverflow.com/questions/28524290/how-to-generate-unique-random-value-for-each-user-in-laravel-and-add-it-to-datab
+	
+
+Kazdy uzywtkownik ma przypisany unikatowy secret key, ktory jest wykozystywany podczas prywatnego udostepniania plikow. Robimy, że można cofnąć uprawnienia do pliku czy nie? Jeśli tak, to musimy zabronić ponownego udostępnienia pliku. 
+
+    https://stackoverflow.com/questions/28524290/how-to-generate-unique-random-value-for-each-user-in-laravel-and-add-it-to-datab
+	
 	
 - Po udostępnieniu plików na koncie adresata powinno się pojawić powiadomienie o nowym pliku
 
-	Po nadaniu innemu uzytkownikowi uprawneń do pliku, dostaje on powiadomienie w views/drive/notifications.
-	Dajemy użytkownikowi możliwość akceptacji/odrzucenia pliku, czy nie?
+
+Po nadaniu innemu uzytkownikowi uprawneń do pliku, dostaje on powiadomienie w views/drive/notifications. użytkownikowi możliwość akceptacji/odrzucenia pliku, czy nie?
+	
 	
 - Użytkownik powinien posiadać listę aktualnie udostępnionych plików
 
-	Kazdy plik posiada liste uzytkownikow, którym został udostępniony.
+Kazdy plik posiada liste uzytkownikow, którym został udostępniony.
+	
 	
 - Akacja powinna udostępniać REST API umożliwiające integrację z różnego typu klientami
 
@@ -50,3 +60,5 @@ lub
 
 - Responsywne menu
 - Obrazek pliku przy file list item
+
+
