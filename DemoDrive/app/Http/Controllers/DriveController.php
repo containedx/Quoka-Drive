@@ -15,9 +15,19 @@ class DriveController extends Controller
         } else {
             return view('auth.login');
         }
+    }
+    
+    public function guest()
+    {
+        return view('auth.login');
 
     }
 
+    public function notifications()
+    {
+        return view('drive.notifications');
+
+    }
 
     public function create()
     {
