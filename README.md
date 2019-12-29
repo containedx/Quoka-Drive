@@ -27,7 +27,7 @@ Kazdy uzywtkownik ma przypisany unikatowy secret key, ktory jest wykozystywany p
 - Po udostępnieniu plików na koncie adresata powinno się pojawić powiadomienie o nowym pliku
 
 
-Po nadaniu innemu uzytkownikowi uprawneń do pliku, dostaje on powiadomienie w views/drive/notifications. użytkownikowi możliwość akceptacji/odrzucenia pliku, czy nie?
+Po nadaniu innemu uzytkownikowi uprawneń do pliku, dostaje on powiadomienie w views/drive/notifications. Dajemy użytkownikowi możliwość akceptacji/odrzucenia pliku, czy nie?
 	
 	
 - Użytkownik powinien posiadać listę aktualnie udostępnionych plików
@@ -56,9 +56,5 @@ lub
     git commit -m "Adds changes to index function in DriveController" -m "[ redirection to auth.login if user isn't signed in ]"
 
 
-##To Do
-
-- Responsywne menu
-- Obrazek pliku przy file list item
 
 
