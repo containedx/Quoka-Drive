@@ -29,6 +29,24 @@ class DriveController extends Controller
 
     }
 
+    public function mNotifications()
+    {
+        return view('drive.mobile.m_notifications');
+
+    }
+
+    public function mShare()
+    {
+        return view('drive.mobile.m_share');
+
+    }
+
+    public function mStorage()
+    {
+        return view('drive.mobile.m_storage');
+
+    }
+
     public function create()
     {
         //

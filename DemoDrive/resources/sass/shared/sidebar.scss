@@ -7,6 +7,7 @@
     border:1px solid rgba(224, 224, 245, 0.8);
     z-index: 1;
 
+
     #sidebar-content{
         width: 16rem;
         position: absolute;
@@ -18,6 +19,11 @@
         grid-template-columns: 1fr;
         z-index: 1;
 
+        @media only screen and (max-width: 1200px) {
+
+            grid-template-rows: 15rem 4rem 3rem repeat(4 , 3rem);
+
+        }
 
         #user-details{
             height: 15rem;
@@ -126,6 +132,17 @@
 
             &.nav-link-m{
                 display: none;
+            }
+
+            @media only screen and (max-width: 1200px) {
+
+                &.nav-link-d{
+                    display: none;
+                }
+
+                &.nav-link-m{
+                    display: block;
+                }
             }
 
         }

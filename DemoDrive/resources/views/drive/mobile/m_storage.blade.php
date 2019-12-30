@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <main id="main-drive">
+    <main id="m_main-drive">
 
         <!-- Left Sidebar -->
 
@@ -319,10 +319,6 @@
             </div>
 
         </section>
-
-        <!-- Private Share -->
-
-        @include('drive.shared.share')
 
     </main>
 

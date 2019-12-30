@@ -5,6 +5,18 @@
     border:1px solid rgba(224, 224, 245, 0.8);
     z-index: 0;
 
+    @media only screen and (min-width: 1200px) {
+
+        display: block;
+
+    }
+
+    @media only screen and (max-width: 1200px) {
+
+        display:  none;
+
+    }
+
     .section-title{
         position: absolute;
         height: 2.5rem;

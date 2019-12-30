@@ -32,6 +32,12 @@
   z-index: 1;
 }
 
+@media only screen and (max-width: 1200px) {
+  #main-notifications #sidebar #sidebar-content {
+    grid-template-rows: 15rem 4rem 3rem repeat(4, 3rem);
+  }
+}
+
 #main-notifications #sidebar #sidebar-content #user-details {
   height: 15rem;
   z-index: 1;
@@ -139,6 +145,16 @@
 
 #main-notifications #sidebar #sidebar-content a.nav-link-m {
   display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #main-notifications #sidebar #sidebar-content a.nav-link-d {
+    display: none;
+  }
+
+  #main-notifications #sidebar #sidebar-content a.nav-link-m {
+    display: block;
+  }
 }
 
 #main-notifications #notifications {
@@ -270,6 +286,18 @@
   max-height: 87rem;
   border: 1px solid rgba(224, 224, 245, 0.8);
   z-index: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  #main-notifications #share {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #main-notifications #share {
+    display: none;
+  }
 }
 
 #main-notifications #share .section-title {
