@@ -723,7 +723,7 @@
 }
 
 #main-notifications #m_share #share-list.toggle {
-  height: calc(87vh - 205px);
+  height: calc(87vh - 255px);
 }
 
 #main-notifications #m_share #share-list .accordion {

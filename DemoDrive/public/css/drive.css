@@ -226,7 +226,7 @@
 }
 
 #m_main-drive #storage #files-list.toggle {
-  max-height: calc(87vh - 205px);
+  max-height: calc(87vh - 255px);
 }
 
 #m_main-drive #storage #files-list .files-list-item {
@@ -374,7 +374,7 @@
 }
 
 #m_main-drive #m_share #share-list.toggle {
-  height: calc(87vh - 205px);
+  height: calc(87vh - 255px);
 }
 
 #m_main-drive #m_share #share-list .accordion {
@@ -951,7 +951,7 @@
 }
 
 #main-drive #m_share #share-list.toggle {
-  height: calc(87vh - 205px);
+  height: calc(87vh - 255px);
 }
 
 #main-drive #m_share #share-list .accordion {

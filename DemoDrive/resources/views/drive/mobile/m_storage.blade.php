@@ -330,6 +330,7 @@
 
     function myWindowSize() {
         if (window.innerWidth >= 1200) {
+
             window.location.replace("/drive");
         }
     }
