@@ -7,6 +7,17 @@
     border:1px solid rgba(224, 224, 245, 0.8);
     z-index: 1;
 
+    @media only screen and (min-width: 800px) {
+
+        display: block;
+
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        display: none;
+
+    }
 
     #sidebar-content{
         width: 16rem;

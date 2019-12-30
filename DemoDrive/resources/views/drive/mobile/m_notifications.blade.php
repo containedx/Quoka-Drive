@@ -7,11 +7,11 @@
 
         <!-- Left Sidebar -->
 
-        @include('drive.shared.sidebar')
+        @include('drive.mobile.shared.m_sidebar')
 
         <!-- Notifications about files shared by other users -->
 
-            <section id="notifications">
+        <section id="notifications">
 
                 <!-- Title -->
 
@@ -154,7 +154,24 @@
 
             </section>
 
-        </main>
+    </main>
 
 @endsection
 
+<script type="text/javascript">
+
+    window.addEventListener('resize', myWindowSize);
+
+    function myWindowSize() {
+        if (window.innerWidth >= 1200) {
+            window.location.replace("/notifications");
+        }
+    }
+
+    function myToggle(){
+        document.getElementById("m_main-notifications").classList.toggle("toggle");
+        document.getElementById("notifications").classList.toggle("toggle");
+        document.getElementById("notifications-list").classList.toggle("toggle");
+    }
+
+</script>

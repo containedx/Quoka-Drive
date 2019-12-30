@@ -6,3 +6,77 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+body{
+    overflow-y: hidden;
+}
+
+
+
+.navbar{
+
+    .navbar-toggler{
+
+        @media only screen and (min-width: 800px) {
+
+            display: none !important;
+
+        }
+
+    }
+
+
+    #navbarNav{
+
+
+        ul{
+
+            @media only screen and (min-width: 800px) {
+
+                display: none !important;
+
+            }
+
+            @media only screen and (max-width: 800px) {
+
+                display:  flex !important;
+
+            }
+
+            li{
+
+                a{
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    text-decoration: none;
+                    font-size: 14px;
+
+                    svg{
+                        margin: 0 0.6rem 0 0;
+                        font-size: 19px;
+                    }
+
+
+                    &.nav-link-m{
+                        display: none;
+                    }
+
+                    @media only screen and (max-width: 1200px) {
+
+                        &.nav-link-d{
+                            display: none;
+                        }
+
+                        &.nav-link-m{
+                            display: block;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}

@@ -1,3 +1,348 @@
+#m_main-notifications {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 1fr;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  margin: 3vh 1rem 0 0;
+  max-height: 90vh;
+}
+
+#m_main-notifications #sidebar {
+  background: #fff;
+  max-height: 87vh;
+  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid rgba(224, 224, 245, 0.8);
+  z-index: 1;
+}
+
+@media only screen and (min-width: 800px) {
+  #m_main-notifications #sidebar {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #m_main-notifications #sidebar {
+    display: none;
+  }
+}
+
+#m_main-notifications #sidebar #sidebar-content {
+  width: 16rem;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  -webkit-transform: translate(-50%, -5%);
+          transform: translate(-50%, -5%);
+  display: grid;
+  grid-template-rows: 15rem 4rem 3rem repeat(3, 3rem);
+  grid-template-columns: 1fr;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  #m_main-notifications #sidebar #sidebar-content {
+    grid-template-rows: 15rem 4rem 3rem repeat(4, 3rem);
+  }
+}
+
+#m_main-notifications #sidebar #sidebar-content #user-details {
+  height: 15rem;
+  z-index: 1;
+}
+
+#m_main-notifications #sidebar #sidebar-content #user-details #user-img {
+  height: 11rem;
+}
+
+#m_main-notifications #sidebar #sidebar-content #user-details #user-img img {
+  background: #fff;
+  display: block;
+  margin: 1rem auto 0 auto;
+  border: 1px solid rgba(224, 224, 245, 0.8);
+  border-radius: 5px;
+  height: 11rem;
+  width: 11rem;
+}
+
+#m_main-notifications #sidebar #sidebar-content #user-details #user-name {
+  height: 2rem;
+  margin: 0.5rem 0 0 0;
+  line-height: 2rem;
+  font-size: 15px;
+  text-align: center;
+}
+
+#m_main-notifications #sidebar #sidebar-content #secret-key {
+  display: block;
+  margin: 0 auto;
+}
+
+#m_main-notifications #sidebar #sidebar-content #secret-key span {
+  padding: 0 0 0 0.5rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #6470f8;
+  font-weight: 300;
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop {
+  width: 16rem;
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop .file-drop-area {
+  position: relative;
+  height: 2.5rem;
+  width: 10rem;
+  margin: 0 auto 1rem auto;
+  -webkit-box-align: center;
+          align-items: center;
+  border: 0.5px solid rgba(46, 60, 71, 0.05);
+  border-radius: 5px;
+  background: rgba(137, 167, 248, 0.95);
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop .file-drop-area:hover {
+  background: rgba(138, 160, 239, 0.95);
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop .file-drop-area .file-msg {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  color: #fff;
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop .file-drop-area .file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop .file-drop-area .file-input:focus {
+  outline: none;
+}
+
+#m_main-notifications #sidebar #sidebar-content a {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  line-height: 4.5rem;
+  text-align: left;
+  padding: 0 0 0 4.5rem;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#m_main-notifications #sidebar #sidebar-content a svg {
+  margin: 0 0.6rem 0 0;
+  font-size: 19px;
+}
+
+#m_main-notifications #sidebar #sidebar-content a.nav-link-m {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #m_main-notifications #sidebar #sidebar-content a.nav-link-d {
+    display: none;
+  }
+
+  #m_main-notifications #sidebar #sidebar-content a.nav-link-m {
+    display: block;
+  }
+}
+
+#m_main-notifications.toggle {
+  max-height: calc(87vh - 205px);
+}
+
+@media only screen and (min-width: 800px) {
+  #m_main-notifications {
+    grid-template-columns: 15rem 1fr;
+    margin: 3vh 1rem 0 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #m_main-notifications {
+    grid-template-columns: 1fr;
+    margin: 3vh 1rem 0 1rem;
+  }
+}
+
+#m_main-notifications #notifications {
+  background: #fff;
+  border-radius: 5px;
+  height: 100%;
+  max-height: 87rem;
+  border: 1px solid rgba(224, 224, 245, 0.8);
+  position: relative;
+}
+
+#m_main-notifications #notifications.toggle {
+  max-height: calc(87vh - 205px);
+}
+
+#m_main-notifications #notifications .section-title {
+  position: absolute;
+  width: 100%;
+  height: 2.5rem;
+  background: #dee8ee;
+  border-bottom: 1px solid rgba(203, 197, 249, 0.62);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  line-height: 2.5rem;
+  padding: 0 0 0 1rem;
+  -webkit-column-gap: 1px;
+     -moz-column-gap: 1px;
+          column-gap: 1px;
+}
+
+#m_main-notifications #notifications #notifications-list {
+  display: grid;
+  grid-auto-rows: 5rem;
+  grid-template-columns: 1fr;
+  margin: 2.5rem 0 0 0;
+  height: 82.5vh;
+  overflow-y: scroll;
+}
+
+#m_main-notifications #notifications #notifications-list.toggle {
+  height: calc(87vh - 255px);
+}
+
+@media only screen and (max-width: 950px) {
+  #m_main-notifications #notifications #notifications-list {
+    grid-auto-rows: auto;
+  }
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item {
+  display: grid;
+  grid-template-columns: auto 1fr 4rem 4rem;
+  grid-template-rows: 1fr;
+  -webkit-column-gap: 1px;
+     -moz-column-gap: 1px;
+          column-gap: 1px;
+  padding: 0 1rem 0 1rem;
+}
+
+@media only screen and (max-width: 950px) {
+  #m_main-notifications #notifications #notifications-list .notifications-list-item {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+  }
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item:nth-of-type(2n) {
+  background-color: rgba(224, 224, 245, 0.15);
+  border-top: 1px solid rgba(167, 175, 224, 0.27);
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item:last-of-type {
+  border-bottom: 1px solid rgba(167, 175, 224, 0.27);
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__details {
+  padding: 0 1rem 0 0;
+}
+
+@media only screen and (max-width: 950px) {
+  #m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__details {
+    padding: 1rem 0 0 0;
+  }
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__details span {
+  font-size: 16px;
+  line-height: 5rem;
+  padding: 0 0 0 1rem;
+}
+
+@media only screen and (max-width: 950px) {
+  #m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__details span {
+    line-height: 1.5rem;
+  }
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__accept {
+  line-height: 5rem;
+  padding: 0 0 0 0.5rem;
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__accept a {
+  padding: 0.5rem 0.73rem;
+  border: 1px solid rgba(82, 245, 50, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  -webkit-transition-delay: 0.02s;
+          transition-delay: 0.02s;
+  background-color: rgba(82, 245, 50, 0.02);
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__accept a svg {
+  color: rgba(31, 162, 30, 0.6);
+  -webkit-transition-delay: 0.02s;
+          transition-delay: 0.02s;
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__accept a:hover {
+  border: 1px solid rgba(82, 245, 50, 0.8);
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__accept a:hover svg {
+  color: rgba(31, 162, 30, 0.8);
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__del {
+  line-height: 5rem;
+  padding: 0 0 0 0.5rem;
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__del a {
+  padding: 0.5rem 0.73rem;
+  border: 1px solid rgba(245, 114, 103, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  -webkit-transition-delay: 0.02s;
+          transition-delay: 0.02s;
+  background-color: rgba(245, 114, 103, 0.02);
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__del a svg {
+  color: rgba(214, 34, 43, 0.6);
+  -webkit-transition-delay: 0.02s;
+          transition-delay: 0.02s;
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__del a:hover {
+  border: 1px solid rgba(245, 114, 103, 0.7);
+}
+
+#m_main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__del a:hover svg {
+  color: rgba(214, 34, 43, 0.75);
+}
+
 #main-notifications {
   display: grid;
   grid-template-columns: 15rem 1fr 450px;
@@ -17,6 +362,18 @@
   border-bottom-right-radius: 5px;
   border: 1px solid rgba(224, 224, 245, 0.8);
   z-index: 1;
+}
+
+@media only screen and (min-width: 800px) {
+  #main-notifications #sidebar {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #main-notifications #sidebar {
+    display: none;
+  }
 }
 
 #main-notifications #sidebar #sidebar-content {
@@ -157,6 +514,29 @@
   }
 }
 
+#main-notifications.toggle {
+  max-height: calc(87vh - 205px);
+}
+
+@media only screen and (min-width: 1200px) {
+  #main-notifications {
+    grid-template-columns: 15rem 1fr 450px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #main-notifications {
+    grid-template-columns: 15rem 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #main-notifications {
+    grid-template-columns: 1fr;
+    margin: 3vh 1rem 0 1rem;
+  }
+}
+
 #main-notifications #notifications {
   background: #fff;
   border-radius: 5px;
@@ -164,6 +544,10 @@
   max-height: 87rem;
   border: 1px solid rgba(224, 224, 245, 0.8);
   position: relative;
+}
+
+#main-notifications #notifications.toggle {
+  max-height: calc(87vh - 205px);
 }
 
 #main-notifications #notifications .section-title {
@@ -191,6 +575,16 @@
   overflow-y: scroll;
 }
 
+#main-notifications #notifications #notifications-list.toggle {
+  height: calc(87vh - 255px);
+}
+
+@media only screen and (max-width: 950px) {
+  #main-notifications #notifications #notifications-list {
+    grid-auto-rows: auto;
+  }
+}
+
 #main-notifications #notifications #notifications-list .notifications-list-item {
   display: grid;
   grid-template-columns: auto 1fr 4rem 4rem;
@@ -199,6 +593,13 @@
      -moz-column-gap: 1px;
           column-gap: 1px;
   padding: 0 1rem 0 1rem;
+}
+
+@media only screen and (max-width: 950px) {
+  #main-notifications #notifications #notifications-list .notifications-list-item {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+  }
 }
 
 #main-notifications #notifications #notifications-list .notifications-list-item:nth-of-type(2n) {
@@ -214,10 +615,22 @@
   padding: 0 1rem 0 0;
 }
 
+@media only screen and (max-width: 950px) {
+  #main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__details {
+    padding: 1rem 0 0 0;
+  }
+}
+
 #main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__details span {
   font-size: 16px;
   line-height: 5rem;
   padding: 0 0 0 1rem;
+}
+
+@media only screen and (max-width: 950px) {
+  #main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__details span {
+    line-height: 1.5rem;
+  }
 }
 
 #main-notifications #notifications #notifications-list .notifications-list-item .notifications-list-item__accept {
@@ -280,12 +693,123 @@
   color: rgba(214, 34, 43, 0.75);
 }
 
-#main-notifications #share {
-  background: #fff;
+#main-notifications #m_share {
   border-radius: 5px;
   max-height: 87rem;
   border: 1px solid rgba(224, 224, 245, 0.8);
   z-index: 0;
+  background: #dee8ee;
+}
+
+#main-notifications #m_share.toggle {
+  max-height: calc(87vh - 205px);
+}
+
+#main-notifications #m_share .section-title {
+  position: absolute;
+  display: block;
+  height: 2.5rem;
+  background: #dee8ee;
+  border-bottom: 1px solid rgba(203, 197, 249, 0.62);
+  line-height: 2.5rem;
+  padding: 0 0 0 1rem;
+}
+
+#main-notifications #m_share #share-list {
+  margin: 2.5rem 0 0 0;
+  height: 82.5vh;
+  overflow-y: scroll;
+  background: #fff;
+}
+
+#main-notifications #m_share #share-list.toggle {
+  height: calc(87vh - 205px);
+}
+
+#main-notifications #m_share #share-list .accordion {
+  background: #fff !important;
+}
+
+#main-notifications #m_share #share-list .accordion .card {
+  border: none;
+  border-bottom: 1px solid rgba(224, 224, 245, 0.8);
+  border-radius: 0 !important;
+  background: #fff !important;
+}
+
+#main-notifications #m_share #share-list .accordion .card:hover .card-header {
+  border-bottom: none;
+}
+
+#main-notifications #m_share #share-list .accordion .card:hover .card-header .mb-0 .btn.btn-link {
+  text-decoration: none;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-header {
+  padding: 0.3rem 0 !important;
+  border-bottom: none;
+  background: rgba(224, 224, 245, 0.25) !important;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-header:hover .mb-0 .btn.btn-link {
+  text-decoration: none;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-header .mb-0 {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-header .mb-0 .btn {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  text-align: left;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-header .mb-0 .btn.btn-link {
+  color: #222;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-body ul {
+  display: grid;
+  grid-auto-rows: 1.5rem;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-body ul li {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 5rem;
+  margin: 0.5rem 0 0 0;
+  row-gap: 0.2rem;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-body ul li span {
+  text-align: left;
+  padding: 0 0 0 2rem;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-body ul li a {
+  text-align: left;
+  color: #ff5953;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-notifications #m_share #share-list .accordion .card .card-body ul li a:hover {
+  text-decoration: underline;
+}
+
+#main-notifications #share {
+  background: #dee8ee;
+  border-radius: 5px;
+  max-height: 87rem;
+  border: 1px solid rgba(224, 224, 245, 0.8);
+  z-index: 0;
+}
+
+#main-notifications #share.toggle {
+  max-height: calc(87vh - 205px);
 }
 
 @media only screen and (min-width: 1200px) {
@@ -314,6 +838,11 @@
   margin: 2.5rem 0 0 0;
   height: 82.5vh;
   overflow-y: scroll;
+  background: #fff;
+}
+
+#main-notifications #share #share-list.toggle {
+  height: calc(87vh - 205px);
 }
 
 #main-notifications #share #share-list .accordion {

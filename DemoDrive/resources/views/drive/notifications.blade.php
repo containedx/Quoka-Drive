@@ -161,3 +161,13 @@
     </main>
 
 @endsection
+
+<script>
+
+    function myToggle(){
+        document.getElementById("main-notifications").classList.toggle("toggle");
+        document.getElementById("notifications").classList.toggle("toggle");
+        document.getElementById("notifications-list").classList.toggle("toggle");
+    }
+
+</script>

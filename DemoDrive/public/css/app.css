@@ -11356,3 +11356,53 @@ a.text-dark:focus {
   }
 }
 
+body {
+  overflow-y: hidden;
+}
+
+@media only screen and (min-width: 800px) {
+  .navbar .navbar-toggler {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .navbar #navbarNav ul {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar #navbarNav ul {
+    display: -webkit-box !important;
+    display: flex !important;
+  }
+}
+
+.navbar #navbarNav ul li a {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar #navbarNav ul li a svg {
+  margin: 0 0.6rem 0 0;
+  font-size: 19px;
+}
+
+.navbar #navbarNav ul li a.nav-link-m {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar #navbarNav ul li a.nav-link-d {
+    display: none;
+  }
+
+  .navbar #navbarNav ul li a.nav-link-m {
+    display: block;
+  }
+}
+

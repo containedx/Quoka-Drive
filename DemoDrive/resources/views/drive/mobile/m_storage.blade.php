@@ -7,7 +7,7 @@
 
         <!-- Left Sidebar -->
 
-        @include('drive.shared.sidebar')
+        @include('drive.mobile.shared.m_sidebar')
 
         <!-- Main File Storage -->
 
@@ -323,3 +323,23 @@
     </main>
 
 @endsection
+
+<script type="text/javascript">
+
+    window.addEventListener('resize', myWindowSize);
+
+    function myWindowSize() {
+        if (window.innerWidth >= 1200) {
+            window.location.replace("/drive");
+        }
+    }
+
+
+    function myToggle(){
+        document.getElementById("m_main-drive").classList.toggle("toggle");
+        document.getElementById("storage").classList.toggle("toggle");
+        document.getElementById("files-list").classList.toggle("toggle");
+
+    }
+
+</script>

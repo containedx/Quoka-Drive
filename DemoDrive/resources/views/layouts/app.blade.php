@@ -27,38 +27,91 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white"  style=" padding-left: 0 !important; padding-bottom: 0 !important; line-height: 3.5rem !important; height:3.5rem !important; border-bottom:1px solid rgba(224, 224, 245, 0.8);">
-            <div class="container" style="margin: 0 0 0 1.3rem !important;  display: inline-block !important;
-">
 
-                @if (Route::has('register'))
-                    <a class="navbar-brand" style="padding-top: 0 !important; padding-bottom: 0 !important;" href="{{ url('drive') }}" >
-                        Demo Drive
-                    </a>
-                @else
-                    <a class="navbar-brand" style="padding-top: 0 !important; padding-bottom: 0 !important;" href="{{ url('auth/login') }}">
-                        Demo Drive
-                    </a>
-                @endif
+        <nav class="navbar navbar-expand-lg" style=" background: #fff !important; padding-left: 0 !important; padding-bottom: 0 !important; line-height: 3.5rem !important; min-height:3.5rem !important; border-bottom:1px solid rgba(224, 224, 245, 0.8);">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            @if (Route::has('register'))
+                <a class="navbar-brand" style="padding-top: 0 !important; padding-bottom: 0 !important; padding-left: 1.3rem !important; color: #000 !important; " href="{{ url('drive') }}" >
+                    Demo Drive
+                </a>
+            @else
+                <a class="navbar-brand" style="padding-top: 0 !important; padding-bottom: 0 !important; padding-left: 1.3em !important; color: #000 !important;"  href="{{ url('auth/login') }}">
+                    Demo Drive
+                </a>
+            @endif
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+            <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="myToggle()">
+                <i class="fas fa-th" style="font-size: 24px; color: #999;"></i>
+            </button>
 
-                    </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" style="text-align: center !important;">
 
-                </div>
+                    <li>
+                        <a class="nav-link-d" href="/drive" style="text-decoration: none !important;">
+                            <i class="far fa-folder-open"></i>
+                            {{ __('Storage') }}
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link-d" href="/notifications" style="text-decoration: none !important;">
+                            <i class="far fa-bell"></i>
+                            {{ __('Notifications') }}
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link-m" href="/drive/mobile/m_storage" style="text-decoration: none !important;">
+                            <i class="far fa-folder-open"></i>
+                            {{ __('Storage') }}
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link-m" href="/drive/mobile/m_share" style="text-decoration: none !important;" >
+                            <i class="fas fa-share-square"></i>
+                            {{ __('Share Files') }}
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a class="nav-link-m" href="/drive/mobile/m_notifications" style="text-decoration: none !important;" >
+                            <i class="far fa-bell"></i>
+                            {{ __('Notifications') }}
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a  href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"
+
+                            style="text-decoration: none !important;">
+
+                            <i class="fas fa-power-off"></i>
+                            {{ __('Sign Out') }}
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </a>
+                    </li>
+
+                </ul>
             </div>
         </nav>
 
-        <main class="py-4" style="padding-bottom: 0 !important; padding-top: 0 !important;">
+
+        <main class="py-4"  id="main-container" style="padding-bottom: 0 !important; padding-top: 0 !important;">
             @yield('content')
         </main>
     </div>
 </body>
 </html>
+
+
+
 
