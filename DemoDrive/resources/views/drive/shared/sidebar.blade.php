@@ -20,10 +20,14 @@
         </div>
 
         <div id="file-drop">
-            <div class="file-drop-area">
-                <span class="file-msg">Upload New File</span>
-                <input class="file-input" type="file" multiple>
-            </div>
+            <form  method="post" action="/storeFile">
+                <div class="file-drop-area">
+                    <span class="file-msg">Upload New File</span>
+                    <input class="file-input" type="file" >
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+
         </div>
 
         <a class="nav-link-d" href="/drive">
