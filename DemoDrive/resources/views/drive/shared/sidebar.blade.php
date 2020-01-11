@@ -20,14 +20,14 @@
         </div>
 
         <div id="file-drop">
-            <form  method="post" action="/storeFile">
+            <form  method="POST" action="/storeFile" enctype="multipart/form-data">
+                {{csrf_field()}}
                 <div class="file-drop-area">
                     <span class="file-msg">Upload New File</span>
-                    <input class="file-input" type="file" >
+                    <input class="file-input" id="file-input" type="file" multiple>
                 </div>
                 <input type="submit" value="Submit">
             </form>
-
         </div>
 
         <a class="nav-link-d" href="/drive">
