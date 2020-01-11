@@ -11,8 +11,9 @@ class FileController extends Controller
     {
 
         $file = $request->file('file');
-
         dd($file);
+
+
     }
 
 }

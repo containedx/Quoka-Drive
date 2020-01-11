@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1446830d-a0d8-420d-9efd-ecc0f96cf507" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoDrive/resources/views/drive/shared/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DemoDrive/resources/views/drive/shared/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoDrive/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/DemoDrive/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578747865928</updated>
-      <workItem from="1578747867347" duration="5611000" />
+      <workItem from="1578747867347" duration="5945000" />
     </task>
     <task id="LOCAL-00001" summary="Added File Model and Controller">
       <created>1578751448586</created>

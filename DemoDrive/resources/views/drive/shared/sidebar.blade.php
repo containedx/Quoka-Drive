@@ -24,7 +24,7 @@
                 {{csrf_field()}}
                 <div class="file-drop-area">
                     <span class="file-msg">Upload New File</span>
-                    <input class="file-input" id="file-input" type="file" multiple>
+                    <input class="file-input" id="file-input" type="file" name="file" multiple>
                 </div>
                 <input type="submit" value="Submit">
             </form>
