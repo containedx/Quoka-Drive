@@ -65,7 +65,7 @@
                      </div>                  <!-- Share Button -->
 
                      <div class="files-list-item__del">
-                         <a role="button">
+                         <a role="button" href="/files/{{$file->id}}/destroy">
                              <i class="far fa-trash-alt"></i>
                          </a>
                      </div>                    <!-- Delete Button -->

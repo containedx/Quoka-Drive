@@ -20,4 +20,11 @@ class FileController extends Controller
         return redirect('/');
     }
 
+    public function destroy($id)
+    {
+        $file = File::find($id);
+        $file->delete();
+        return redirect('/');
+    }
+
 }

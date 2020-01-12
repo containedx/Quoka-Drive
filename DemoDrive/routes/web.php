@@ -23,4 +23,6 @@ Route::get('/drive/mobile/m_share/', "DriveController@mShare")->middleware('auth
 
 Route::post('/storeFile', "FileController@store")->middleware('auth');
 
+Route::get('/files/{id}/destroy', 'FileController@destroy');
+
 Auth::routes();
