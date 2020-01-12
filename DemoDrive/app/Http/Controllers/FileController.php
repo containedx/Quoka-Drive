@@ -10,10 +10,14 @@ class FileController extends Controller
     public function store(Request $request)
     {
 
-        $file = $request->file('file');
-        dd($file);
+        $file = new File();
+        $file->name = $request->file('file')->getClientOriginalName();
+        $file->size = $request->file('file')->getSize();
+        $file->type = $request->file('file')->getClientMimeType();
+        $file->url = "na sztywno";
+        $file->save();
 
-
+        return redirect('/');
     }
 
 }

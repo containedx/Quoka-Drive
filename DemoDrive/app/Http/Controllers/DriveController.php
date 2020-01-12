@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\File;
 
 class DriveController extends Controller
 {
@@ -11,7 +12,8 @@ class DriveController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            return view('drive.index');
+            $files = File::all();
+            return view('drive.index')->withFiles($files);
         } else {
             return view('auth.login');
         }

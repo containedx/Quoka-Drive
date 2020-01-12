@@ -49,9 +49,33 @@
                     <div class="files-list-item__download">
                         <a role="button">Download</a>
                     </div>               <!-- Download Button -->
-
                 </div>
 
+            @foreach ($files as $file)
+                <div class="files-list-item">
+
+                     <div class="files-list-item__name">{{ $file->name }}</div>  <!-- File Name -->
+                     <div class="files-list-item__size">{{ $file->size }}</div>               <!-- File Size -->
+                     <div class="files-list-item__type">{{ $file->type }}</div>            <!-- File Type -->
+
+                     <div class="files-list-item__share">
+                         <a role="button">
+                              <i class="fas fa-external-link-alt"></i>
+                         </a>
+                     </div>                  <!-- Share Button -->
+
+                     <div class="files-list-item__del">
+                         <a role="button">
+                             <i class="far fa-trash-alt"></i>
+                         </a>
+                     </div>                    <!-- Delete Button -->
+
+                     <div class="files-list-item__download">
+                        <a role="button">Download</a>
+                     </div>               <!-- Download Button -->
+
+                </div>
+            @endforeach
             </div>
 
         </section>
