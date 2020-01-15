@@ -5,7 +5,7 @@
 
         <div id="user-details">
             <div id="user-img">
-                <img src="img/user.png" />
+                <img src="img/user.jpg" />
             </div>
 
             <div id="user-name">
@@ -23,10 +23,10 @@
             <form  method="POST" action="/storeFile" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="file-drop-area">
-                    <span class="file-msg">Upload New File</span>
+                    <span class="file-msg">Select New File</span>
                     <input class="file-input" id="file-input" type="file" name="file" multiple>
                 </div>
-                <input type="submit" value="Submit">
+                <input  id="submit-btn" type="submit" value="Upload File">
             </form>
         </div>
 

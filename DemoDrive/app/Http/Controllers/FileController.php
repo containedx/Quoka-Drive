@@ -12,7 +12,7 @@ class FileController extends Controller
 
         $file = new File();
         $file->name = $request->file('file')->getClientOriginalName();
-        $file->size = $request->file('file')->getSize();
+        $file->size = $request->file('file')->getSize()/1024;
         $file->type = $request->file('file')->getClientMimeType();
         $file->url = "na sztywno";
         $file->save();

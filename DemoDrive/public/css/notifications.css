@@ -39,7 +39,7 @@
   -webkit-transform: translate(-50%, -5%);
           transform: translate(-50%, -5%);
   display: grid;
-  grid-template-rows: 15rem 4rem 3rem repeat(3, 3rem);
+  grid-template-rows: 15rem 4rem 6.5rem repeat(3, 3rem);
   grid-template-columns: 1fr;
   z-index: 1;
 }
@@ -92,6 +92,23 @@
 
 #m_main-notifications #sidebar #sidebar-content #file-drop {
   width: 16rem;
+  cursor: default !important;
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop #submit-btn {
+  display: block;
+  height: 2.5rem;
+  width: 10rem;
+  margin: 0 auto 1rem auto;
+  border: 0.5px solid rgba(46, 60, 71, 0.05);
+  border-radius: 5px;
+  background: rgba(137, 167, 248, 0.95);
+  color: #fff;
+  cursor: default !important;
+}
+
+#m_main-notifications #sidebar #sidebar-content #file-drop #submit-btn:hover {
+  background: rgba(138, 160, 239, 0.95);
 }
 
 #m_main-notifications #sidebar #sidebar-content #file-drop .file-drop-area {
@@ -104,6 +121,7 @@
   border: 0.5px solid rgba(46, 60, 71, 0.05);
   border-radius: 5px;
   background: rgba(137, 167, 248, 0.95);
+  cursor: default !important;
 }
 
 #m_main-notifications #sidebar #sidebar-content #file-drop .file-drop-area:hover {
@@ -131,7 +149,6 @@
   top: 0;
   height: 100%;
   width: 100%;
-  cursor: pointer;
   opacity: 0;
 }
 
@@ -384,7 +401,7 @@
   -webkit-transform: translate(-50%, -5%);
           transform: translate(-50%, -5%);
   display: grid;
-  grid-template-rows: 15rem 4rem 3rem repeat(3, 3rem);
+  grid-template-rows: 15rem 4rem 6.5rem repeat(3, 3rem);
   grid-template-columns: 1fr;
   z-index: 1;
 }
@@ -437,6 +454,23 @@
 
 #main-notifications #sidebar #sidebar-content #file-drop {
   width: 16rem;
+  cursor: default !important;
+}
+
+#main-notifications #sidebar #sidebar-content #file-drop #submit-btn {
+  display: block;
+  height: 2.5rem;
+  width: 10rem;
+  margin: 0 auto 1rem auto;
+  border: 0.5px solid rgba(46, 60, 71, 0.05);
+  border-radius: 5px;
+  background: rgba(137, 167, 248, 0.95);
+  color: #fff;
+  cursor: default !important;
+}
+
+#main-notifications #sidebar #sidebar-content #file-drop #submit-btn:hover {
+  background: rgba(138, 160, 239, 0.95);
 }
 
 #main-notifications #sidebar #sidebar-content #file-drop .file-drop-area {
@@ -449,6 +483,7 @@
   border: 0.5px solid rgba(46, 60, 71, 0.05);
   border-radius: 5px;
   background: rgba(137, 167, 248, 0.95);
+  cursor: default !important;
 }
 
 #main-notifications #sidebar #sidebar-content #file-drop .file-drop-area:hover {
@@ -476,7 +511,6 @@
   top: 0;
   height: 100%;
   width: 100%;
-  cursor: pointer;
   opacity: 0;
 }
 

@@ -6,33 +6,8 @@
 
     <div id="share-list">
         <div class="accordion" id="accordionExample275">
-            <div class="card z-depth-0 bordered">
-                <div class="card-header" id="headingOne2">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2"
-                                aria-expanded="true" aria-controls="collapseOne2">
-                            &#x27A3; Example File 1
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2"
-                     data-parent="#accordionExample275">
-                    <div class="card-body">
-                        <div class="search-container">
-                            <span>Type secret key of the user you want to share your file with:</span>
-                            </br> </br>
-                            <form action="/action_page.php">
-                                <input type="text" placeholder="Secret Key..." name="search">
-                                <button type="submit"><i class="fas fa-plus"></i></button>
-                            </form>
-                            </br>
-                            <span>File shared with:</span>
-                            No one
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+<!--
             <div class="card z-depth-0 bordered">
                 <div class="card-header" id="headingTwo2">
                     <h5 class="mb-0">
@@ -62,7 +37,36 @@
                     </div>
                 </div>
             </div>
+-->
 
+            @foreach ( \App\File::all() as $file)
+                <div class="card z-depth-0 bordered">
+                    <div class="card-header" id="headingOne2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne{{ $loop->index }}"
+                                    aria-expanded="true" aria-controls="collapseOne{{ $loop->index }}">
+                                &#x27A3; {{ $file->name }}
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne{{ $loop->index }}" class="collapse" aria-labelledby="headingOne2"
+                         data-parent="#accordionExample275">
+                        <div class="card-body">
+                            <div class="search-container">
+                                <span>Type secret key of the user you want to share your file with:</span>
+                                </br> </br>
+                                <form action="/action_page.php">
+                                    <input type="text" placeholder="Secret Key..." name="search">
+                                    <button type="submit"><i class="fas fa-plus"></i></button>
+                                </form>
+                                </br>
+                                <span>File shared with:</span>
+                                No one
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
 
     </div>
