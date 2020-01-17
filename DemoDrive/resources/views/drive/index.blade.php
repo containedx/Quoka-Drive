@@ -41,8 +41,8 @@
                          </a>
                      </div>                  <!-- Share Button -->
 
-                     <div class="files-list-item__del">
-                         <a role="button" href="/files/{{$file->id}}/destroy">
+                     <div class="files-list-item__del" >
+                         <a role="button" href="/files/{{$file->id}}/destroy" onclick="copyToClipboard('copy_{{ $file->url }}')">
                              <i class="far fa-trash-alt"></i>
                          </a>
                      </div>                    <!-- Delete Button -->
@@ -74,6 +74,11 @@
         document.getElementById("storage").classList.toggle("toggle");
         document.getElementById("files-list").classList.toggle("toggle");
 
+    }
+
+    function copyToClipboard(url) {
+        document.getElementById(url).select();
+        document.execCommand('copy');
     }
 
 </script>

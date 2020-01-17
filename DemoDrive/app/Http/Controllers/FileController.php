@@ -16,12 +16,10 @@ class FileController extends Controller
         $file->name = $request->file('file')->getClientOriginalName();
         $file->size = $request->file('file')->getSize()/1024;
         $file->type = $request->file('file')->getClientMimeType();
-
-        $url = Storage::url($file->name);
-        $file->url = $url;
+        $file->url =  Storage::disk('s3')->url($file->name);
         $file->save();
-        Storage::disk('s3')->put($file->name, $file);
-
+        Storage::disk('s3')->put($file->name, $file, 'public');
+        //dd($file->url);
         return redirect('/');
     }
 
