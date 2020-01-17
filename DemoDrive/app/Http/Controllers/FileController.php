@@ -18,7 +18,7 @@ class FileController extends Controller
         Storage::disk('s3')->put($file->name, file_get_contents($request->file('file')));
         $file->url =  Storage::disk('s3')->url($file->name);
         $file->save();
-        
+
         return redirect('/');
     }
 
@@ -26,9 +26,15 @@ class FileController extends Controller
     {
         $file = File::find($id);
         $file->delete();
-        $url = Storage::url($file->name);
-        Storage::disk('s3')->delete($file->name  );
+        Storage::disk('s3')->delete($file->name );
         return redirect('/');
+    }
+
+    public function download($id)
+    {
+        $file = File::find($id);
+        Storage::disk('s3')->download($file->url);
+        return back()->withSuccess('File downloaded successfully');
     }
 
 }

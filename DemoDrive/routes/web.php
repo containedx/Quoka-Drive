@@ -25,4 +25,7 @@ Route::post('/storeFile', "FileController@store")->middleware('auth');
 
 Route::get('/files/{id}/destroy', 'FileController@destroy');
 
+Route::get('/files/{id}/download', 'FileController@download');
+
+
 Auth::routes();
