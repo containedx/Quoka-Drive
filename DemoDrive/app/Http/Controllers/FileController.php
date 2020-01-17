@@ -14,13 +14,13 @@ class FileController extends Controller
 
         $file = new File();
         $file->name = $request->file('file')->getClientOriginalName();
-        Storage::disk('s3')->put($file->name, $file);
         $file->size = $request->file('file')->getSize()/1024;
         $file->type = $request->file('file')->getClientMimeType();
 
         $url = Storage::url($file->name);
         $file->url = $url;
         $file->save();
+        Storage::disk('s3')->put($file->name, $file);
 
         return redirect('/');
     }
@@ -29,6 +29,8 @@ class FileController extends Controller
     {
         $file = File::find($id);
         $file->delete();
+        $url = Storage::url($file->name);
+        Storage::disk('s3')->delete($file->name  );
         return redirect('/');
     }
 
