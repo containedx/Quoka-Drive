@@ -48,7 +48,7 @@
                      </div>                    <!-- Delete Button -->
 
                      <div class="files-list-item__download">
-                        <a role="button">Download</a>
+                        <a role="button" href="/files/{{$file->id}}/download" target="_blank">Download</a>
                      </div>               <!-- Download Button -->
 
                 </div>
