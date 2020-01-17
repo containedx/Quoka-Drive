@@ -16,7 +16,7 @@
 
         <div id="secret-key">
             Secret Key:
-            <span>21sd3QaA</span>
+            <span>{{ Auth::user()->secret_key }}</span>
         </div>
 
         <div id="file-drop">
