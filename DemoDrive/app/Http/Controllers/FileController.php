@@ -18,7 +18,7 @@ class FileController extends Controller
         Storage::disk('s3')->put($file->name, file_get_contents($request->file('file')));
         $file->url =  Storage::disk('s3')->url($file->name);
         $file->save();
-
+        
         return redirect('/');
     }
 

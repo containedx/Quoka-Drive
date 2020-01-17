@@ -36,7 +36,7 @@
                      <div class="files-list-item__type">{{ $file->type }}</div>            <!-- File Type -->
 
                      <div class="files-list-item__share">
-                         <a role="button">
+                         <a role="button" href="{{ $file->url }}">
                               <i class="fas fa-external-link-alt"></i>
                          </a>
                      </div>                  <!-- Share Button -->
