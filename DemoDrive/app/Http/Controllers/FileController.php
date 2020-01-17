@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\File;
+use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
+
 {
     public function store(Request $request)
     {
 
         $file = new File();
         $file->name = $request->file('file')->getClientOriginalName();
+        Storage::disk('s3')->put($file->name, $file);
         $file->size = $request->file('file')->getSize()/1024;
         $file->type = $request->file('file')->getClientMimeType();
         $file->url = "na sztywno";
