@@ -6,8 +6,16 @@
 
 actor: AcceptanceTester
 modules:
-    enabled:
-        - PhpBrowser:
-            url: http://localhost/myapp
-        - \Helper\Acceptance
-    step_decorators: ~        
+  enabled:
+    #        - PhpBrowser:
+    #            url: http://localhost/myapp
+    - Asserts
+    - WebDriver:
+        url: http://localhost:8000
+        browser: chrome
+    - \Helper\Acceptance
+    - Db: # <-- added this section
+        dsn: 'mysql:host=localhost;dbname=test'
+        user: 'test'
+        password: 'test123'
+  step_decorators: ~
