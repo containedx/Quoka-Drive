@@ -40,7 +40,9 @@
 -->
 
             @foreach ( \App\File::all() as $file)
-                <div class="card z-depth-0 bordered">
+            @if ($file->secret_key == Auth::user()->secret_key)
+
+            <div class="card z-depth-0 bordered">
                     <div class="card-header" id="headingOne2">
                         <h5 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne{{ $loop->index }}"
@@ -65,6 +67,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
             @endforeach
 
             <div class="card z-depth-0 bordered">
@@ -82,7 +85,6 @@
                         <div class="search-container">
                             <ul>
                                 @foreach ( \App\File::all() as $file)
-
                                     @if ($file->shared == true)
                                         <li>{{$file->name}}</li>
                                     @endif
