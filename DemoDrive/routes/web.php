@@ -15,7 +15,7 @@ Route::get('/', "DriveController@index");
 
 Route::get('/drive', "DriveController@index")->middleware('auth');
 
-Route::get('/notifications', "DriveController@notifications")->middleware('auth');
+Route::get('/notifications', "NotificationController@index")->middleware('auth');
 
 Route::get('/drive/mobile/m_notifications', "DriveController@mNotifications")->middleware('auth');
 Route::get('/drive/mobile/m_storage', "DriveController@mStorage")->middleware('auth');
