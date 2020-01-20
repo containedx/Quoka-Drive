@@ -55,9 +55,11 @@
                             <div class="search-container">
                                 <span>Type secret key of the user you want to share your file with:</span>
                                 </br> </br>
-                                <form action="/action_page.php">
-                                    <input type="text" placeholder="Secret Key..." name="search">
-                                    <button type="submit"><i class="fas fa-plus"></i></button>
+                                <form method="POST" action="/share">
+                                    {{csrf_field()}}
+                                    <input type="text" placeholder="Secret Key..." name="secretkey">
+                                    <input type="text" value="{{$file->url}}" name="url">
+                                    <input type="submit"><i class="fas fa-plus"></i></input>
                                 </form>
                                 </br>
                                 <span>File shared with:</span>

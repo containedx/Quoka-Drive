@@ -27,5 +27,7 @@ Route::get('/files/{id}/destroy', 'FileController@destroy');
 
 Route::get('/files/{id}/download', 'FileController@download');
 
+Route::post('/share', "NotificationController@share");
+
 
 Auth::routes();
