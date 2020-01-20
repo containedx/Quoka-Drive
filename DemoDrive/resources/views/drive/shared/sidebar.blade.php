@@ -24,9 +24,9 @@
                 {{csrf_field()}}
                 <div class="file-drop-area">
                     <span class="file-msg">Select New File</span>
-                    <input class="file-input" id="file-input" type="file" name="file" multiple>
+                    <input class="file-input" id="file-input_n" type="file" name="file" multiple>
                 </div>
-                <input  id="submit-btn" type="submit" value="Upload File">
+                <input  id="submit-btn" type="submit" value="Upload File" disabled>
             </form>
         </div>
 
@@ -71,3 +71,12 @@
 
 </nav>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("file-input_n").onchange = function() {
+            if(this.value) {
+                document.getElementById("submit-btn").disabled = false;
+            }
+        }
+    });
+</script>

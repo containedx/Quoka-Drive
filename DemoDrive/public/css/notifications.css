@@ -79,7 +79,7 @@
 
 #m_main-notifications #sidebar #sidebar-content #secret-key {
   display: block;
-  margin: 0 auto;
+  margin: 0 0 0 1.5rem;
 }
 
 #m_main-notifications #sidebar #sidebar-content #secret-key span {
@@ -441,7 +441,7 @@
 
 #main-notifications #sidebar #sidebar-content #secret-key {
   display: block;
-  margin: 0 auto;
+  margin: 0 0 0 1.5rem;
 }
 
 #main-notifications #sidebar #sidebar-content #secret-key span {

@@ -36,13 +36,13 @@
                      <div class="files-list-item__type">{{ $file->type }}</div>            <!-- File Type -->
 
                      <div class="files-list-item__share">
-                         <a role="button" href="{{ $file->url }}">
+                         <a role="button" href="{{ $file->url }}" target="_blank">
                               <i class="fas fa-external-link-alt"></i>
                          </a>
                      </div>                  <!-- Share Button -->
 
                      <div class="files-list-item__del" >
-                         <a role="button" href="/files/{{$file->id}}/destroy" onclick="copyToClipboard('copy_{{ $file->url }}')">
+                         <a role="button" href="/files/{{$file->id}}/destroy" onclick="copyToClipboard('copy_{{ $file->url }}')" >
                              <i class="far fa-trash-alt"></i>
                          </a>
                      </div>                    <!-- Delete Button -->

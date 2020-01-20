@@ -83,7 +83,7 @@
 
 #m_main-drive #sidebar #sidebar-content #secret-key {
   display: block;
-  margin: 0 auto;
+  margin: 0 0 0 1.5rem;
 }
 
 #m_main-drive #sidebar #sidebar-content #secret-key span {
@@ -672,7 +672,7 @@
 
 #main-drive #sidebar #sidebar-content #secret-key {
   display: block;
-  margin: 0 auto;
+  margin: 0 0 0 1.5rem;
 }
 
 #main-drive #sidebar #sidebar-content #secret-key span {
