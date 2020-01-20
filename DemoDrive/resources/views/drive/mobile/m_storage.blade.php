@@ -28,293 +28,36 @@
 
             <div id="files-list">
 
-                <div class="files-list-item">
+                @foreach (  \App\File::all() as $file)
 
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
+                    @if ($file->secret_key == Auth::user()->secret_key)
 
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
+                        <div class="files-list-item">
 
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
+                            <div class="files-list-item__name">{{ $file->name }}</div>  <!-- File Name -->
+                            <div class="files-list-item__size">{{ $file->size }}</div>               <!-- File Size -->
+                            <div class="files-list-item__type">{{ $file->type }}</div>            <!-- File Type -->
 
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
+                            <div class="files-list-item__share">
+                                <a role="button" href="{{ $file->url }}" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>                  <!-- Share Button -->
 
-                </div>
+                            <div class="files-list-item__del" >
+                                <a role="button" href="/files/{{$file->id}}/destroy" onclick="copyToClipboard('copy_{{ $file->url }}')" >
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                            </div>                    <!-- Delete Button -->
 
-                <div class="files-list-item">
+                            <div class="files-list-item__download">
+                                <a role="button" href="/files/{{$file->id}}/download" target="_blank">Download</a>
+                            </div>               <!-- Download Button -->
 
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
+                        </div>
 
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
-
-                <div class="files-list-item">
-
-                    <div class="files-list-item__name">Example File 1</div>  <!-- File Name -->
-                    <div class="files-list-item__size">3</div>               <!-- File Size -->
-                    <div class="files-list-item__type">.pdf</div>            <!-- File Type -->
-
-                    <div class="files-list-item__share">
-                        <a role="button">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>                  <!-- Share Button -->
-
-                    <div class="files-list-item__del">
-                        <a role="button">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                    </div>                    <!-- Delete Button -->
-
-                    <div class="files-list-item__download">
-                        <a role="button">Download</a>
-                    </div>               <!-- Download Button -->
-
-                </div>
+                    @endif
+                @endforeach
 
             </div>
 
