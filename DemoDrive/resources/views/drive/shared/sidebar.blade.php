@@ -19,7 +19,7 @@
             <span>{{ Auth::user()->secret_key }}</span>
         </div>
 
-        <div id="file-drop">
+        <div id="file-drop" style="padding: 0 0 2rem; 0">
             <form  method="POST" action="/storeFile" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="file-drop-area">
@@ -40,7 +40,7 @@
             {{ __('Notifications') }}
         </a>
 
-        <a class="nav-link-m" href="/drive/mobile/m_storage">
+        <a class="nav-link-m" href="/drive/mobile/m_storage" >
             <i class="far fa-folder-open"></i>
             {{ __('Storage') }}
         </a>

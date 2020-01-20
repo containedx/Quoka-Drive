@@ -46,7 +46,7 @@
 
 @media only screen and (max-width: 1200px) {
   #m_main-notifications #sidebar #sidebar-content {
-    grid-template-rows: 15rem 4rem 3rem repeat(4, 3rem);
+    grid-template-rows: 15rem 4rem 6.5rem repeat(4, 3rem);
   }
 }
 
@@ -408,7 +408,7 @@
 
 @media only screen and (max-width: 1200px) {
   #main-notifications #sidebar #sidebar-content {
-    grid-template-rows: 15rem 4rem 3rem repeat(4, 3rem);
+    grid-template-rows: 15rem 4rem 6.5rem repeat(4, 3rem);
   }
 }
 
