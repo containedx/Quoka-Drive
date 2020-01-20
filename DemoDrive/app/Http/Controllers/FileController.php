@@ -36,8 +36,7 @@ class FileController extends Controller
     public function download($id)
     {
         $file = File::find($id);
-        Storage::disk('s3')->download($file->url);
-        return back()->withSuccess('File downloaded successfully');
+        return Storage::disk('s3')->download(Auth::user()->id . "/" . $file->name);
     }
 
 
