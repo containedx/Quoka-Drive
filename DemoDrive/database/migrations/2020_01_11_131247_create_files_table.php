@@ -15,10 +15,12 @@ class CreateFilesTable extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('secret_key');
             $table->string('name');
             $table->integer('size');
             $table->string('type');
             $table->string('url');
+            $table->boolean('shared');
             $table->timestamps();
         });
     }

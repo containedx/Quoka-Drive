@@ -58,17 +58,40 @@
                                 <form method="POST" action="/share">
                                     {{csrf_field()}}
                                     <input type="text" placeholder="Secret Key..." name="secretkey">
-                                    <input type="text" value="{{$file->url}}" name="url">
-                                    <input type="submit"><i class="fas fa-plus"></i></input>
+                                    <input type="text" value="{{$file->id}}" name="id" style="visibility: hidden; width: 3px;">
+                                    <button type="submit" style=" height: 28px;"><i class="fas fa-plus"></i></button>
                                 </form>
-                                </br>
-                                <span>File shared with:</span>
-                                No one
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
+
+            <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingOne2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                            Your Shared Files:
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne2"
+                     data-parent="#accordionExample275">
+                    <div class="card-body">
+                        <div class="search-container">
+                            <ul>
+                                @foreach ( \App\File::all() as $file)
+
+                                    @if ($file->shared == true)
+                                        <li>{{$file->name}}</li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

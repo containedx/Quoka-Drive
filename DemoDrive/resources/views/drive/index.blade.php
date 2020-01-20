@@ -29,6 +29,9 @@
             <div id="files-list">
 
             @foreach (  \App\File::all() as $file)
+
+                @if ($file->secret_key == Auth::user()->secret_key)
+
                 <div class="files-list-item">
 
                      <div class="files-list-item__name">{{ $file->name }}</div>  <!-- File Name -->
@@ -52,6 +55,8 @@
                      </div>               <!-- Download Button -->
 
                 </div>
+
+                @endif
             @endforeach
             </div>
 

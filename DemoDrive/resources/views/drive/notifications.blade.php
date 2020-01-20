@@ -36,18 +36,19 @@
                 </div>
 
                 @foreach (  $notifications as $notification)
-                    <!-- $notification->secret_key == Auth::user()->secret_key-->
-                <div class="notifications-list-item">
+                    @if ($notification->secret_key == Auth::user()->secret_key)
+                        <div class="notifications-list-item">
 
-                    <div class="notifications-list-item__details">
-                        <span>Someone send you a new file! Click: <a href="{{ $notification->url }}" target="_blank"> link </a></span>
-                    </div>
+                                <div class="notifications-list-item__details">
+                                    <span>Someone send you a new file! Click: <a href="{{ $notification->url }}" target="_blank"> link </a></span>
+                                </div>
 
-                    <div></div>  <!-- styling purposes -->
-                    <div></div>  <!-- styling purposes -->
-                    <div></div>  <!-- styling purposes -->
+                                <div></div>  <!-- styling purposes -->
+                                <div></div>  <!-- styling purposes -->
+                                <div></div>  <!-- styling purposes -->
 
-                </div>
+                            </div>
+                    @endif
                 @endforeach
 
             </div>
