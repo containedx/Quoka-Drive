@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Elobox Drive</title>
+    <title>Quoka Drive</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -32,11 +32,11 @@
 
             @if (Route::has('register'))
                 <a class="navbar-brand" style="padding-top: 0 !important; padding-bottom: 0 !important; padding-left: 1.3rem !important; color: #000 !important; " href="{{ url('drive') }}" >
-                    Demo Drive
+                    Quoka Drive
                 </a>
             @else
                 <a class="navbar-brand" style="padding-top: 0 !important; padding-bottom: 0 !important; padding-left: 1.3em !important; color: #000 !important;"  href="{{ url('auth/login') }}">
-                    Demo Drive
+                    Quoka Drive
                 </a>
             @endif
 
