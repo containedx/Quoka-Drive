@@ -9,19 +9,19 @@
 - Użytkownik może tworzyć link do pobrania pliku, jest on wtedy ogólnie dostępny dla wszystkich osób posiadających link
 
  
-	*Jest to taki szary przycisk ze strzałką. Po kliknięciu kopiujemy link pozwalający ściągnąć konkretny plik.*
+	*Jest generowany przez szary przycisk ze strzałką*
 
 - Użytkownik może udostępniać plik innym użytkownikom serwisu - prywatne udostępnianie
 
-	*Kazdy uzytkownik ma przypisany unikatowy secret key, ktory jest wykozystywany podczas prywatnego udostepniania plikow. Robimy, że można cofnąć uprawnienia do pliku czy nie? Jeśli tak, to musimy zabronić ponownego udostępnienia pliku*
+	*Kazdy uzytkownik ma przypisany unikatowy secret key, ktory jest wykozystywany podczas prywatnego udostepniania plikow.*
 
 - Po udostępnieniu plików na koncie adresata powinno się pojawić powiadomienie o nowym pliku
 
-	*Po nadaniu innemu uzytkownikowi uprawneń do pliku, dostaje on powiadomienie w views/drive/notifications. Dajemy użytkownikowi możliwość akceptacji/odrzucenia pliku, czy nie?*
+	*Po nadaniu innemu uzytkownikowi uprawneń do pliku, dostaje on powiadomienie w views/drive/notifications. *
 
 - Użytkownik powinien posiadać listę aktualnie udostępnionych plików
 
-	 *Kazdy plik posiada liste uzytkownikow, którym został udostępniony.  *
+	 *Kazdy uzytkownik posiada rozwijana liste udostepnionych plikow w sidebar po prawej*
 
 - Akacja powinna udostępniać REST API umożliwiające integrację z różnego typu klientami
 
